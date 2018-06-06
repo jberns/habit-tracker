@@ -1,0 +1,29 @@
+{
+  "name": "habit-tracker",
+  "description": "",
+  "scripts": {
+    "postdeploy": "npm run heroku-postbuild"
+  },
+  "env": {
+    "COOKIE_KEY": {
+      "required": true
+    },
+    "GOOGLE_CLIENT_ID": {
+      "required": true
+    },
+    "GOOGLE_CLIENT_SECRET": {
+      "required": true
+    },
+    "MONGO_URI": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
