@@ -2,16 +2,24 @@
 
 MERN stack habit-tracker
 
-#Setting Up a Local Dev Server
+# Running the local dev server
+
+Once the local setup is complete. You can run the dev server while in the root directory using the command:
+
+`npm run dev`
+
+# Setting Up a Local Dev Server
+
 To setup a local dev server, keys for 3rd party API's need to be added in order to provide database management and authentication.
 
-##Setup config/dev.js file
+## Setup config/dev.js file
+
 The first step is to setup the dev.js file and confirm that it is included in the .gitignore file.
 
 There is an example file called **ex_dev.js.** Remove the **ex\_** so the file says only **dev.js.** If you are using VS Code or Atom the file should turn grey indicating that it will not be commited.
 **DO NOT COMMIT YOUR DEV KEYS TO GITHUB**
 
-##Google OAuth Setup
+## Google OAuth Setup
 
 1.  Navigate to https://console.developers.google.com/apis?project=stately-vector-204022
 2.  On the top bar to the right of the **GoogleAPIs** logo is your project list. Click project list button and make a new project.
@@ -32,7 +40,7 @@ There is an example file called **ex_dev.js.** Remove the **ex\_** so the file s
 - googleClientID: 'Google Client ID'
 - googleClientSecret: 'Google Client Secret',
 
-##Mongo DB Setup
+## Mongo DB Setup
 
 1.  Any monogDB instance can be used for this portion. If you are unfamiliar with setting up a mongoDB you can use https://mlab.com to setup an easy development database.
 2.  After making an account you should be on the home page which has two "+ Create New" buttons. Click the top botton which is associated to the "MongoDB Deployments"
@@ -40,15 +48,15 @@ There is an example file called **ex_dev.js.** Remove the **ex\_** so the file s
 4.  Select your region and then name your database "habit-dev" and finish submitting the server.
 5.  Once you are back on the home page select the "habit-dev" server you just made and click on the "USERS" tab.
 
-- **Important Note: These are database administrator accounts and not user accounts made through OAUTH**
+- **Important Note: These are database administrator accounts and not user accounts made through OAuth**
 
 6.  Click on "Add database user" and make a user account.
 7.  Copy the mongodb:// url under the "To connect using a driver via the standard MongoDB URI (what's this?):" and add it to the following key in the **dev.js** file.
 
 - mongoURI: 'Place mongoDB URL + login Here'
-- Replace the <dbuser> and <dbpassword> with your login information. Do not include the "<" and ">."
+- Replace the dbuser and dbpassword fields with your login information. Do not include the "<" and ">."
 
-##Passport Cookie Setup
+## Passport Cookie Setup
 
 1.  For a local dev you can enter any random string similar to a password. For production you can use a more secure random number/password generator.
 
